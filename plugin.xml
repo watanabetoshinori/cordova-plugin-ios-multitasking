@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-ios-multitasking" version="0.1.0">
+    <name>Device</name>
+    <description>Cordova iOS Multitasking Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,ios,multitasking,slideover,splitview,pip</keywords>
+    <platform name="ios">
+        <!-- Add Storyboard file. -->
+        <resource-file src="src/Launch Screen.storyboard" />
+        <!-- Set Storyboard as Launch. -->
+        <config-file target="*-Info.plist" parent="UILaunchStoryboardName">
+            <string>Launch Screen.storyboard</string>
+        </config-file>
+        <!-- Disable full screen mode. -->
+        <config-file target="*-Info.plist" parent="UIRequiresFullScreen">
+            <false />
+        </config-file>
+    </platform>
+</plugin>
